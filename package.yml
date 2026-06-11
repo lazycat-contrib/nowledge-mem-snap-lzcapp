@@ -1,0 +1,20 @@
+package: community.lazycat.app.nowledge-mem-snap
+version: 0.1.9
+name: Nowledge Mem Snap
+description: "Self-hosted backup service for Nowledge Mem"
+min_os_version: 1.5.0
+author: czyt
+license: GPL-3.0
+homepage: https://github.com/ca-x/nowledge-mem-snap
+
+permissions:
+  required:
+    - net.internet
+
+locales:
+  zh:
+    name: "Nowledge Mem快照"
+    description: "Nowledge Mem 自托管备份服务，支持定时快照与保留策略"
+  en:
+    name: "Nowledge Mem Snap"
+    description: "Self-hosted backup service for Nowledge Mem with scheduled snapshots and retention policies"

@@ -1,0 +1,83 @@
+params:
+  - id: admin_username
+    type: string
+    name: "Admin Username"
+    description: "Bootstrap administrator username for initial login"
+    default_value: "admin"
+    optional: false
+
+  - id: admin_password
+    type: secret
+    name: "Admin Password"
+    description: "Bootstrap administrator password (auto-generated random password recommended)"
+    default_value: "$random(len=20)"
+    optional: false
+
+  - id: session_secret
+    type: secret
+    name: "Session Secret"
+    description: "Secret key for session encryption (auto-generated random value recommended)"
+    default_value: "$random(len=32)"
+    optional: false
+
+  - id: tz
+    type: string
+    name: "Timezone"
+    description: "Schedule times and retention boundaries timezone (e.g. UTC, Asia/Shanghai, America/New_York)"
+    default_value: "Asia/Shanghai"
+    optional: false
+
+  - id: nmeme_api_url
+    type: string
+    name: "Nowledge Mem API URL"
+    description: "Default Nowledge Mem API source URL. Leave empty to configure later in the app UI."
+    default_value: ""
+    optional: true
+
+  - id: nmeme_api_key
+    type: secret
+    name: "Nowledge Mem API Key"
+    description: "API key for the Nowledge Mem API source. Leave empty to configure later."
+    default_value: ""
+    optional: true
+
+  - id: oidc_enabled
+    type: bool
+    name: "Enable OIDC"
+    description: "Enable LazyCat platform OpenID Connect single sign-on. Client ID/Secret and Redirect URL are auto-configured."
+    default_value: "true"
+    optional: false
+
+  - id: oidc_allowed_domains
+    type: string
+    name: "OIDC Allowed Domains"
+    description: "Comma-separated list of allowed email domains for OIDC login (e.g. example.com). Leave empty to allow all."
+    default_value: ""
+    optional: true
+
+locales:
+  zh:
+    admin_username:
+      name: "管理员用户名"
+      description: "初始管理员登录用户名"
+    admin_password:
+      name: "管理员密码"
+      description: "初始管理员密码（推荐使用自动生成的随机密码）"
+    session_secret:
+      name: "会话密钥"
+      description: "会话加密密钥（推荐使用自动生成的随机值）"
+    tz:
+      name: "时区"
+      description: "定时任务和保留策略使用的时区（如 UTC、Asia/Shanghai、America/New_York）"
+    nmeme_api_url:
+      name: "Nowledge Mem API 地址"
+      description: "默认的 Nowledge Mem API 源地址。留空则在应用内手动配置。"
+    nmeme_api_key:
+      name: "Nowledge Mem API 密钥"
+      description: "Nowledge Mem API 的访问密钥。留空则在应用内手动配置。"
+    oidc_enabled:
+      name: "启用 OIDC 单点登录"
+      description: "启用懒猫平台 OpenID Connect 单点登录。客户端 ID/Secret 和回调地址由平台自动配置。"
+    oidc_allowed_domains:
+      name: "OIDC 允许域名"
+      description: "OIDC 登录允许的邮箱域名列表，逗号分隔（如 example.com）。留空则不限制。"
