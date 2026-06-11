@@ -19,8 +19,8 @@ application:
 
 services:
   nowledge-mem-snap:
-    # czyt/nowledge-mem-snap:v0.1.12
-    image: registry.lazycat.cloud/czyt/czyt/nowledge-mem-snap:6b7d2b4c753b9fb7
+    # czyt/nowledge-mem-snap:v0.1.13
+    image: registry.lazycat.cloud/czyt/czyt/nowledge-mem-snap:510f948ac66be812
     user: root
     environment:
       - DATA_DIR=/app/data
