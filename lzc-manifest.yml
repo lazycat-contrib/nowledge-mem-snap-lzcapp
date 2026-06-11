@@ -10,7 +10,6 @@ application:
     - id: login-autofill
       when:
         - /login
-        - /
       do:
         - src: builtin://simple-inject-password
           params:
