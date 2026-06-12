@@ -1,5 +1,5 @@
 package: community.lazycat.app.nowledge-mem-snap
-version: 0.2.0
+version: 0.2.2
 name: Nowledge Mem Snap
 description: "Self-hosted backup service for Nowledge Mem"
 min_os_version: 1.5.0
