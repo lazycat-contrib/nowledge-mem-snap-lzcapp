@@ -15,11 +15,11 @@ application:
           params:
             user: "{{ .U.admin_username }}"
             password: "{{ .U.admin_password }}"
-
 services:
   nowledge-mem-snap:
     # czyt/nowledge-mem-snap:v0.2.5
-    image: registry.lazycat.cloud/czyt/czyt/nowledge-mem-snap:588a01b8b8a76699
+    # upstream: docker.io/czyt/nowledge-mem-snap:v0.2.5
+    image: registry.lazycat.cloud/czyt/czyt/nowledge-mem-snap:6f17fc52521aee5b
     user: root
     environment:
       - DATA_DIR=/app/data
